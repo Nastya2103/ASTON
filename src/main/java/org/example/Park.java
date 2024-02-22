@@ -18,9 +18,9 @@ public class Park {
     }
 
     public class Attractions {
-        public String name;
-        public String timetable;
-        public double price;
+        private String name;
+        private String timetable;
+        private double price;
 
         public Attractions(String name, String timetable, double price) {
             this.name = name;
