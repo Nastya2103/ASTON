@@ -11,12 +11,10 @@ public class Circle implements Figure {
         this.colorBorders = colorBorders;
     }
 
-    @Override
     public double checkPerimeter() {
         return Math.PI * radius * 2;
     }
 
-    @Override
     public double checkArea() {
         return Math.PI * radius * radius;
     }
