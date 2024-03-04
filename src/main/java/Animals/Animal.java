@@ -2,13 +2,13 @@ package Animals;
 
 public abstract class Animal {
     protected String name;
-    protected int distanceSwim;
-    protected int distanceRun;
+    protected int metersOfRun;
+    protected int metersOfSwim;
 
-    public Animal(String name, int distanceSwim, int distanceRun) {
+    public Animal(String name, int metersOfRun, int metersOfSwim) {
         this.name = name;
-        this.distanceSwim = distanceSwim;
-        this.distanceRun = distanceRun;
+        this.metersOfRun = metersOfRun;
+        this.metersOfSwim = metersOfSwim;
     }
 
     public String getName() {

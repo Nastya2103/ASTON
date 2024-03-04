@@ -2,14 +2,14 @@ package Animals;
 
 public class Dog extends Animal {
 
-    private final int run;
-    private final int swim;
+    private final int distanceRun;
+    private final int distanceSwim;
     private static int dogCount;
 
-    public Dog(String name, int distanceRun, int distanceSwim) {
-        super(name, distanceSwim, distanceRun);
-        this.run = 500;
-        this.swim = 10;
+    public Dog(String name, int metersOfRun, int metersOfSwim) {
+        super(name, metersOfRun, metersOfSwim);
+        this.distanceRun = 500;
+        this.distanceSwim = 10;
 
         dogCount++;
     }
@@ -18,30 +18,30 @@ public class Dog extends Animal {
         return dogCount;
     }
 
-    public int getRun() {
-        if (distanceRun >= run) {
-            System.out.printf("%s пробежал %s м.%n", name, distanceRun);
+    public int run() {
+        if (metersOfRun >= distanceRun) {
+            System.out.printf("%s пробежал %s м.%n", name, metersOfRun);
         }
-        if (distanceRun < run) {
-            System.out.printf("%s пробежал %s м. (не добежал %s м.)%n", name, distanceRun, (run - distanceRun));
+        if (metersOfRun < distanceRun) {
+            System.out.printf("%s пробежал %s м. (не добежал %s м.)%n", name, metersOfRun, (distanceRun - metersOfRun));
         }
-        return run;
+        return distanceRun;
     }
 
-    public int getSwim() {
-        if (distanceSwim >= swim) {
-            System.out.printf("%s проплыл %s м.%n", name, distanceSwim);
+    public int swim() {
+        if (metersOfSwim >= distanceSwim) {
+            System.out.printf("%s проплыл %s м.%n", name, metersOfSwim);
         }
-        if (distanceSwim < swim) {
-            System.out.printf("%s проплыл %s м. (не доплыл %s м.)%n", name, distanceSwim, (swim - distanceSwim));
+        if (metersOfSwim < distanceSwim) {
+            System.out.printf("%s проплыл %s м. (не доплыл %s м.)%n", name, metersOfSwim, (distanceSwim - metersOfSwim));
         }
-        return swim;
+        return distanceSwim;
     }
 
     @Override
     public void printInfo() {
-        System.out.printf("%s должен пробежать %s м. и проплыть %s м.%n", name, run, swim);
-        getRun();
-        getSwim();
+        System.out.printf("%s должен пробежать %s м. и проплыть %s м.%n", name, distanceRun, distanceSwim);
+        run();
+        swim();
     }
 }
