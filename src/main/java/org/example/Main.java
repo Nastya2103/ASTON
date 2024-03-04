@@ -12,13 +12,13 @@ public class Main {
 
         System.out.println("***********************************************************");
 
-        Employee[] persArray = new Employee[5];
+        Person[] persArray = new Employee[5];
         persArray[0] = new Employee("Иванов Иван", "Инженер", "ivan@mail.ru", 89524555428L, 30000, 30);
         persArray[1] = new Employee("Владимирова Диана", "Строитель", "mkfjjfj@yandex.ru", 8925222533322L, 50000, 40);
         persArray[2] = new Employee("Прохоров Петр", "Каскадер", "jhjdhvjhv@gmail.com", 895452235521L, 80000, 35);
         persArray[3] = new Employee("Андреев Владимир", "Программист", "jdhfjhfh@jjdhdfh", 8952255225223L, 100000, 37);
         persArray[4] = new Employee("Емельянов Алексей", "Ведущий менеджер", "vkkdjfjj@cjdvh", 89225522265L, 96924, 50);
-        for (Employee person : persArray)
+        for (Person person : persArray)
             person.printInfo();
 
         System.out.println("************************************************************");
