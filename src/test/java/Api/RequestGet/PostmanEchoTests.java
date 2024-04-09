@@ -10,7 +10,7 @@ import static org.hamcrest.Matchers.equalTo;
 public class PostmanEchoTests {
     private final static String URL = "https://postman-echo.com";
 
-    @Test(priority = 1)
+    @Test(priority = 115)
     public void testGetFields() {
         Specifications.installSpecification(Specifications.requestSpec(URL), Specifications.responseSpecOk200());
         given()
